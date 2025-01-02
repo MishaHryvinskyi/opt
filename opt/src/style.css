@@ -1,0 +1,96 @@
+.form {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 50px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+}
+.wrapper {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.input-wrapper1 {
+  margin-right: 50px;
+}
+
+.input-wrapper2 {
+  margin-left: 50px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+input {
+  margin-top: 20px;
+  font-size: 30px;
+  display: block;
+  width: 400px;
+  padding: 10px 20px;
+}
+
+.order-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.user-list {
+  background-color: rgb(200, 237, 237);
+}
+
+.order-tab__th th{
+  background-color: rgb(130, 169, 169);
+  color: white;
+}
+
+th, td {
+  width: 180px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 30px;
+  border: 1px solid #2a2a2a;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.btn {
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  padding: 20px 30px;
+  background-color: rgb(106, 106, 214);
+  color: white;
+}
+
+.btn:hover {
+  border-radius: 50px;
+  background-color: rgb(76, 76, 186);
+}

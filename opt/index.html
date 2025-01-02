@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <form class="js-form form">
+      <div class="wrapper">
+        <div class="input-wrapper1">
+          <label for="name">
+            Імя
+            <input class="user-name" id="name" name="name" type="text">
+          </label>
+          <label for="lastName">
+            Прізвище
+            <input class="user-last-name" id="lastName" name="lastName" type="text">
+          </label>
+          <label for="number">
+            Номер телефону
+            <input class="user-number" id="number" name="number" type="number">
+          </label>
+        </div>
+        <div class="input-wrapper2">
+          <label for="rim">
+            Оправа
+            <input class="user-rim" id="rim" name="rim" type="text">
+          </label>
+          <label for="lenses">
+            Лінзи
+            <input class="user-lenses" id="lenses" name="lenses" type="text">
+          </label>
+          <label for="job">
+            Робота
+            <input class="job" id="job" name="job" type="text">
+          </label>
+        </div>
+      </div>
+      
+      <button class="btn" type="submit">Створити</button>
+    </form>
+
+    <h2 class="title">Список всіх замовлень</h2>
+      <table class="order-tab">
+        <thead class="order-tab__th">
+            <tr class="user-list">
+              <th>№</th>
+              <th>Ім'я</th>
+              <th>Прізвище</th>
+              <th>Номер</th>
+              <th>Оправа</th>
+              <th>Лінзи</th>
+              <th>Робота</th>
+            </tr>
+        </thead>
+        <tbody class="t-body"></tbody>
+      </table>
+
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html>
