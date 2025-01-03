@@ -7,7 +7,7 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-color: rgb(211, 206, 206);
 }
 .wrapper {
   margin-bottom: 40px;
@@ -23,21 +23,40 @@
 }
 
 label {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: white;
+  color: rgb(56, 50, 50);
 }
 
-input {
+textarea {
   margin-top: 20px;
   font-size: 30px;
   display: block;
-  width: 400px;
+  width: 100%;
   padding: 10px 20px;
+  height: 280px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+input {
+  border: none;
+  margin-top: 20px;
+  font-size: 24px;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.lenses-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .order-tab {
@@ -58,13 +77,18 @@ input {
 }
 
 th, td {
-  width: 180px;
+  width: 119px;
   font-size: 24px;
   font-weight: 700;
+  text-align: center;
 }
 
 table {
   border-collapse: collapse;
+}
+
+thead, tbody {
+  width: 1800px;
 }
 
 table th,

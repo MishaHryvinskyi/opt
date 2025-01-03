@@ -1,0 +1,1 @@
+export const myltiply = (a, b, c, d) => Number(a) + Number(b) + Number(c) + Number(d);

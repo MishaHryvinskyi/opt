@@ -9,37 +9,37 @@
   </head>
   <body>
     <form class="js-form form">
-      <div class="wrapper">
-        <div class="input-wrapper1">
-          <label for="name">
-            Імя
-            <input class="user-name" id="name" name="name" type="text">
-          </label>
-          <label for="lastName">
-            Прізвище
-            <input class="user-last-name" id="lastName" name="lastName" type="text">
+          <label for="userName">
+            Замовник
+            <input required class="user-name" id="userName" name="userName" type="text" placeholder="Прізвище та ім'я">
           </label>
           <label for="number">
             Номер телефону
-            <input class="user-number" id="number" name="number" type="number">
+            <input pattern="\d{10}" required class="user-number" id="number" name="number" type="tel" placeholder="Телефон">
           </label>
-        </div>
-        <div class="input-wrapper2">
+
           <label for="rim">
             Оправа
-            <input class="user-rim" id="rim" name="rim" type="text">
+            <input class="user-rim-price" id="rim" name="rim" type="number" placeholder="Ціна оправи">
           </label>
+
           <label for="lenses">
             Лінзи
-            <input class="user-lenses" id="lenses" name="lenses" type="text">
+            <input class="user-lenses" id="lenses" name="lenses" type="text" placeholder="Виробник і специфікація">
+          </label>
+          <label for="od">
+            OD
+            <input id="od" class="user-lenses-od" type="number" placeholder="ціна-OD">
+          </label>
+          <label for="os">
+            OS
+            <input id="os" class="user-lenses-os" type="number" placeholder="ціна-OS">
           </label>
           <label for="job">
-            Робота
-            <input class="job" id="job" name="job" type="text">
+            Робота техніка
+            <input class="job" id="job" name="job" type="number" placeholder="ціна-роботи майстра">
           </label>
-        </div>
-      </div>
-      
+      <textarea class="comment" placeholder="коментар"></textarea>
       <button class="btn" type="submit">Створити</button>
     </form>
 
@@ -48,12 +48,15 @@
         <thead class="order-tab__th">
             <tr class="user-list">
               <th>№</th>
-              <th>Ім'я</th>
-              <th>Прізвище</th>
-              <th>Номер</th>
-              <th>Оправа</th>
-              <th>Лінзи</th>
-              <th>Робота</th>
+              <th>Замовник</th>
+              <th>Телефон</th>
+              <th>Виробник лiнзи</th>
+              <th>Ціна оправи</th>
+              <th>Ціна OD</th>
+              <th>Ціна OS</th>
+              <th>Робота техніка</th>
+              <th>Коментар</th>
+              <th>Загальна вартість</th>
             </tr>
         </thead>
         <tbody class="t-body"></tbody>

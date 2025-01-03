@@ -3,10 +3,12 @@ import { createMarkup } from "./JS/markup";
 
 const form = document.querySelector('.js-form');
 const userName = document.querySelector('.user-name');
-const userLastName = document.querySelector('.user-last-name');
 const userNumber = document.querySelector('.user-number');
-const rim = document.querySelector('.user-rim');
+const comment = document.querySelector('.comment');
+const rimPrice = document.querySelector('.user-rim-price');
 const lenses = document.querySelector('.user-lenses');
+const lensesOD = document.querySelector('.user-lenses-od');
+const lensesOS = document.querySelector('.user-lenses-os');
 const job = document.querySelector('.job');
 const tBody = document.querySelector('.t-body');
 
@@ -21,11 +23,13 @@ function onSubmit(e) {
     e.preventDefault();
 
     const formData = {
-        name: userName.value.trim(),
-        lastName: userLastName.value.trim(),
+        userName: userName.value.trim(),
         number: userNumber.value.trim(),
-        rim: rim.value.trim(),
+        comment: comment.value.trim(),
+        rimPrice: rimPrice.value.trim(),
         lenses: lenses.value.trim(),
+        lensesOD: lensesOD.value.trim(),
+        lensesOS: lensesOS.value.trim(),
         job: job.value.trim(),
     };
     createUsers(formData).then(newUser => {
