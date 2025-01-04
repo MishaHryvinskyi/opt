@@ -9,10 +9,10 @@ function createMarkup({
     job,
     lensesOD,
     lensesOS,
-    comment
+    comment,
+    ton
  }) {
-    
-   const totalPrice = myltiply(lensesOD, lensesOS, rimPrice, job);
+   const totalPrice = myltiply(lensesOD, lensesOS, rimPrice, job, ton);
     return `
     <tr class="user-list">
         <td class="number-colum">${id}</td>
@@ -23,6 +23,7 @@ function createMarkup({
         <td class="price">${lensesOD || 0} грн</td>
         <td class="price">${lensesOS || 0} грн</td>
         <td class="price">${job || 0} грн</td>
+        <td class="price">${ton} грн</td>
         <td class="comment">${comment || " "}</td>
         <td class="price">${totalPrice} грн</td>
     </tr>`

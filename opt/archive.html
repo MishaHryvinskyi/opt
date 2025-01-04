@@ -7,16 +7,37 @@
     <title>Архів</title>
 </head>
 <body>
-    <header class="header">
-        <nav>
-          <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="./index.html">Головна</a></li>
-            <li class="header__item"><a class="header__link" href="./archive.html">Архів</a></li>
-            <li class="header__item"><a class="header__link" href="#">Пошук</a></li>
-          </ul>
-        </nav>
-      </header>
-      <h2 class="title">Список всіх замовлень</h2>
+  <header class="header">
+    <nav>
+      <ul class="header__list">
+        <li class="header__item">
+          <a class="header__link" href="./index.html">
+          Замовлння 
+          <svg class="header__icon" width="20" height="20">
+            <use href="./src/images/symbol-defs.svg#icon-pencil"></use>
+          </svg>
+        </a>
+      </li>
+        <li class="header__item">
+          <a class="header__link" href="./archive.html">
+          Архів
+          <svg class="header__icon" width="20" height="20">
+            <use href="./src/images/symbol-defs.svg#icon-file"></use>
+          </svg>
+        </a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">
+          Пошук
+          <svg class="header__icon" width="20" height="20">
+            <use href="./src/images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+      <h2 class="title">Архів всіх замовлень</h2>
       <table class="order-tab">
         <thead class="order-tab__th">
             <tr class="user-list">
@@ -28,12 +49,13 @@
               <th class="price">Ціна OD</th>
               <th class="price">Ціна OS</th>
               <th class="price">Робота техніка</th>
+              <th class="price">Тонування</th>
               <th class="comment">Коментар</th>
               <th class="price">Загальна вартість</th>
             </tr>
         </thead>
         <tbody class="t-body"></tbody>
       </table>
-      <script type="module" src="/src/archive.js"></script>
+      <script type="module" src="./src/JS/archive.js"></script>
 </body>
 </html>

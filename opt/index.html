@@ -11,65 +11,88 @@
     <header class="header">
       <nav>
         <ul class="header__list">
-          <li class="header__item"><a class="header__link" href="./index.html">Головна</a></li>
-          <li class="header__item"><a class="header__link" href="./archive.html">Архів</a></li>
-          <li class="header__item"><a class="header__link" href="#">Пошук</a></li>
+          <li class="header__item">
+            <a class="header__link" href="./index.html">
+            Замовлння 
+            <svg class="header__icon" width="20" height="20">
+              <use href="./src/images/symbol-defs.svg#icon-pencil"></use>
+            </svg>
+          </a>
+        </li>
+          <li class="header__item">
+            <a class="header__link" href="./archive.html">
+            Архів
+            <svg class="header__icon" width="20" height="20">
+              <use href="./src/images/symbol-defs.svg#icon-file"></use>
+            </svg>
+          </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+            Пошук
+            <svg class="header__icon" width="20" height="20">
+              <use href="./src/images/symbol-defs.svg#icon-search"></use>
+            </svg>
+          </a>
+          </li>
         </ul>
       </nav>
     </header>
+    <h1 class="title">Створити замовлення</h1>
     <form class="js-form form">
           <label for="userName">
-            Замовник
-            <input required class="user-name" id="userName" name="userName" type="text" placeholder="Прізвище та ім'я">
+           <span>Замовник<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-user"></use></svg></span> 
+            <input required class="user-name input" id="userName" name="userName" type="text" placeholder="Прізвище та ім'я">
           </label>
           <label for="number">
-            Номер телефону
-            <input pattern="\d{10}" required class="user-number" id="number" name="number" type="tel" placeholder="Телефон">
+            <span>Номер телефону<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-phone"></use></svg></span>
+            <input pattern="\d{10}" required class="user-number input" id="number" name="number" type="tel" placeholder="Телефон">
           </label>
 
           <label for="rim">
             Оправа
-            <input class="user-rim-price" id="rim" name="rim" type="number" placeholder="Ціна оправи">
+            <input class="input user-rim-price" id="rim" name="rim" type="number" placeholder="Ціна оправи">
           </label>
 
           <label for="lenses">
             Лінзи
-            <input class="user-lenses" id="lenses" name="lenses" type="text" placeholder="Виробник і специфікація">
+            <input class="input user-lenses" id="lenses" name="lenses" type="text" placeholder="Виробник і специфікація">
           </label>
           <label for="od">
-            OD
-            <input id="od" class="user-lenses-od" type="number" placeholder="ціна-OD">
+            <span>OD<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-price-tag"></use></svg></span>
+            <input id="od" class="input user-lenses-od" type="number" placeholder="ціна-OD">
           </label>
           <label for="os">
-            OS
-            <input id="os" class="user-lenses-os" type="number" placeholder="ціна-OS">
+            <span>OS<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-price-tag"></use></svg></span>
+            <input id="os" class="input user-lenses-os" type="number" placeholder="ціна-OS">
           </label>
-          <label for="job">
-            Робота техніка
-            <input class="job" id="job" name="job" type="number" placeholder="ціна-роботи майстра">
-          </label>
-      <textarea class="comment" placeholder="коментар"></textarea>
-      <button class="btn" type="submit">Створити</button>
-    </form>
 
-    <h2 class="title">Список всіх замовлень</h2>
-      <table class="order-tab">
-        <thead class="order-tab__th">
-            <tr class="user-list">
-              <th class="number-colum">№</th>
-              <th class="customer">Замовник</th>
-              <th class="number">Телефон</th>
-              <th class="producer">Виробник лiнзи</th>
-              <th class="price">Ціна оправи</th>
-              <th class="price">Ціна OD</th>
-              <th class="price">Ціна OS</th>
-              <th class="price">Робота техніка</th>
-              <th class="comment">Коментар</th>
-              <th class="price">Загальна вартість</th>
-            </tr>
-        </thead>
-        <tbody class="t-body"></tbody>
-      </table>
+          <div class="radio-wrapper">
+            <label class="job-wrap" for="job1">
+              <input class="job" id="job1" name="job" type="radio" value="200">Робота техніка
+            </label>
+            <label class="job-wrap" for="job2">
+              <input class="job" id="job2" name="job" type="radio" value="300">Власна оправа
+            </label>
+            <label class="job-wrap" for="job3"> 
+              <input class="job" id="job3" name="job" type="radio" value="250"> Лєска
+            </label>
+            <label class="job-wrap" for="job4">
+              <input class="job" id="job4" name="job" type="radio" value="300"> Біфокали
+            </label>
+          </div>
+          
+          <label class="job-wrap" for="ton">
+            <input class="ton" type="checkbox" name="ton" id="ton" value="250"> Тонування
+          </label>
+          <label for="comment">
+            Коментар
+            <textarea class="comment" placeholder="коментар" id="comment"></textarea>
+          </label>
+      <button class="btn" type="submit">
+        Створити <svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-pencil"></use>
+      </button>
+    </form>
 
     <script type="module" src="/src/index.js"></script>
   </body>

@@ -1,5 +1,6 @@
-import { getUsers, createUsers } from "./API/api";
-import { createMarkup } from "./JS/markup";
+import { createUsers } from "./API/api";
+import { getSelectedRadioValue } from "./JS/func";
+import Notiflix from 'notiflix';
 
 const form = document.querySelector('.js-form');
 const userName = document.querySelector('.user-name');
@@ -9,15 +10,9 @@ const rimPrice = document.querySelector('.user-rim-price');
 const lenses = document.querySelector('.user-lenses');
 const lensesOD = document.querySelector('.user-lenses-od');
 const lensesOS = document.querySelector('.user-lenses-os');
-const job = document.querySelector('.job');
-const tBody = document.querySelector('.t-body');
-
+const ton = document.querySelector('.ton');
 
 form.addEventListener('submit', onSubmit);
-getUsers().then(data => {
-    const markup = data.map(createMarkup).join('');
-    tBody.insertAdjacentHTML('beforeend', markup);
-});
 
 function onSubmit(e) {
     e.preventDefault();
@@ -30,11 +25,17 @@ function onSubmit(e) {
         lenses: lenses.value.trim(),
         lensesOD: lensesOD.value.trim(),
         lensesOS: lensesOS.value.trim(),
-        job: job.value.trim(),
+        ton: ton.checked ? ton.value : 0,
+        job: getSelectedRadioValue("job"),
     };
-    createUsers(formData).then(newUser => {
-        const markup = createMarkup(newUser);
-        tBody.insertAdjacentHTML('beforeend', markup);
+
+    if (!formData.job) {
+        Notiflix.Notify.failure('Будь ласка, оберіть опцію в полі "Робота".');
+        return;
+    }
+
+    createUsers(formData).then(() => {
+        Notiflix.Notify.success('ЗАМОВЛЕННЯ СТВОРЕНО!');
         form.reset(); 
     });
 }

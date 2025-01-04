@@ -9,8 +9,14 @@ a {
   color: inherit;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .form {
   margin: 0 auto;
+  margin-bottom: 100px;
   width: 1200px;
   padding: 50px;
   border-radius: 30px;
@@ -20,6 +26,28 @@ a {
   flex-direction: column;
   background-color: rgb(211, 206, 206);
 }
+
+.radio-wrapper {
+  margin: 40px 0;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.job-wrap {
+  cursor: pointer;
+  display: inline;
+  text-align: center;
+  width: 300px;
+}
+
 .wrapper {
   margin-bottom: 40px;
   display: flex;
@@ -46,20 +74,21 @@ label {
 
 textarea {
   margin-top: 20px;
-  font-size: 30px;
-  display: block;
-  width: 100%;
+  font-size: 22px;
+  border-radius: 4px;
+  min-width: 600px;
   padding: 10px 20px;
-  height: 280px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border: none;
 }
 
-input {
+.input {
+  cursor: pointer;
+  border-radius: 4px;
   border: none;
   margin-top: 20px;
-  font-size: 24px;
-  width: 100%;
+  font-size: 22px;
+  width: 600px;
   padding: 10px 20px;
 }
 
@@ -119,13 +148,16 @@ table td {
   border-radius: 30px;
   border: none;
   padding: 20px 30px;
-  background-color: rgb(106, 106, 214);
-  color: white;
+  background-color: #35bcbf; 
+  box-shadow: 0px 0px 86px -16px rgba(53,188,191,1);
+  color: black;
 }
 
 .btn:hover {
+  box-shadow: 0px 0px 100px 2px rgba(144,246,215,1);
   border-radius: 50px;
-  background-color: rgb(76, 76, 186);
+  background-color: #90f6d7;  
+  color: black;
 }
 
 .number-colum {
@@ -167,7 +199,9 @@ table td {
 
 
 .header__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 240px;
   font-size: 24px;
@@ -181,4 +215,10 @@ table td {
 .header__link:hover {
   box-shadow: 3px 7px 68px 2px rgba(253,255,205,1);
   background-color: #fdffcd;
+}
+
+.header__icon {
+  margin-left: 20px;
+  width: 20px;
+  height: 20px;
 }
