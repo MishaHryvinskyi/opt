@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Архів</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+          <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="./index.html">Головна</a></li>
+            <li class="header__item"><a class="header__link" href="./archive.html">Архів</a></li>
+            <li class="header__item"><a class="header__link" href="#">Пошук</a></li>
+          </ul>
+        </nav>
+      </header>
+      <h2 class="title">Список всіх замовлень</h2>
+      <table class="order-tab">
+        <thead class="order-tab__th">
+            <tr class="user-list">
+              <th class="number-colum">№</th>
+              <th class="customer">Замовник</th>
+              <th class="number">Телефон</th>
+              <th class="producer">Виробник лiнзи</th>
+              <th class="price">Ціна оправи</th>
+              <th class="price">Ціна OD</th>
+              <th class="price">Ціна OS</th>
+              <th class="price">Робота техніка</th>
+              <th class="comment">Коментар</th>
+              <th class="price">Загальна вартість</th>
+            </tr>
+        </thead>
+        <tbody class="t-body"></tbody>
+      </table>
+      <script type="module" src="/src/archive.js"></script>
+</body>
+</html>

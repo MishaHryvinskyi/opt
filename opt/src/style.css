@@ -1,3 +1,14 @@
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .form {
   margin: 0 auto;
   width: 1200px;
@@ -138,4 +149,36 @@ table td {
 
 .comment {
  width:380px;
+}
+
+.header {
+  background-color: rgb(61, 56, 56);
+  width: 1800px;
+  margin: 0 auto;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header__link {
+  display: block;
+  text-align: center;
+  width: 240px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 15px;
+  background-color: skyblue;
+  box-shadow: 3px 7px 68px 2px rgba(135,207,235,1);
+  border-radius: 20px;
+}
+
+.header__link:hover {
+  box-shadow: 3px 7px 68px 2px rgba(253,255,205,1);
+  background-color: #fdffcd;
 }
