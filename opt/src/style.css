@@ -67,17 +67,15 @@ input {
   margin: 0 auto;
 }
 
-.user-list {
-  background-color: rgb(200, 237, 237);
+.user-list:nth-of-type(even) {
+  background-color: lightgray;
 }
 
 .order-tab__th th{
-  background-color: rgb(130, 169, 169);
-  color: white;
+  background-color: skyblue;
 }
 
 th, td {
-  width: 119px;
   font-size: 24px;
   font-weight: 700;
   text-align: center;
@@ -93,7 +91,7 @@ thead, tbody {
 
 table th,
 table td {
-  padding: 30px;
+  padding: 20px 10px;
   border: 1px solid #2a2a2a;
 }
 
@@ -117,4 +115,27 @@ table td {
 .btn:hover {
   border-radius: 50px;
   background-color: rgb(76, 76, 186);
+}
+
+.number-colum {
+  width: 50px;
+}
+.customer {
+  width: 220px;
+}
+
+.number {
+  width: 142px;
+}
+
+.producer {
+  width: 200px;
+}
+
+.price {
+  width: 120px;
+}
+
+.comment {
+ width:380px;
 }

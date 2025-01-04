@@ -15,16 +15,16 @@ function createMarkup({
    const totalPrice = myltiply(lensesOD, lensesOS, rimPrice, job);
     return `
     <tr class="user-list">
-        <td>${id}</td>
-        <td>${userName}</td>
-        <td>${number}</td>
-        <td>${lenses}</td>
-        <td>${rimPrice || 0} грн</td>
-        <td>${lensesOD || 0} грн</td>
-        <td>${lensesOS || 0} грн</td>
-        <td>${job || 0} грн</td>
-        <td>${comment || " "}</td>
-        <td>${totalPrice} грн</td>
+        <td class="number-colum">${id}</td>
+        <td class="customer">${userName}</td>
+        <td class="number">${number}</td>
+        <td class="producer">${lenses}</td>
+        <td class="price">${rimPrice || 0} грн</td>
+        <td class="price">${lensesOD || 0} грн</td>
+        <td class="price">${lensesOS || 0} грн</td>
+        <td class="price">${job || 0} грн</td>
+        <td class="comment">${comment || " "}</td>
+        <td class="price">${totalPrice} грн</td>
     </tr>`
 }
 
