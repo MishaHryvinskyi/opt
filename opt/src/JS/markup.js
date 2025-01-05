@@ -10,11 +10,13 @@ function createMarkup({
     lensesOD,
     lensesOS,
     comment,
-    ton
+    ton,
+    urgency
  }) {
    const totalPrice = myltiply(lensesOD, lensesOS, rimPrice, job, ton);
+   const urgencyClass = urgency ? 'urgency' : '';
     return `
-    <tr class="user-list">
+    <tr class="user-list ${urgencyClass}">
         <td class="number-colum">${id}</td>
         <td class="customer">${userName}</td>
         <td class="number">${number}</td>

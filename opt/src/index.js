@@ -11,6 +11,7 @@ const lenses = document.querySelector('.user-lenses');
 const lensesOD = document.querySelector('.user-lenses-od');
 const lensesOS = document.querySelector('.user-lenses-os');
 const ton = document.querySelector('.ton');
+const urgency = document.querySelector('.urgency');
 
 form.addEventListener('submit', onSubmit);
 
@@ -27,6 +28,7 @@ function onSubmit(e) {
         lensesOS: lensesOS.value.trim(),
         ton: ton.checked ? ton.value : 0,
         job: getSelectedRadioValue("job"),
+        urgency: urgency.checked ? true : false,
     };
 
     if (!formData.job) {

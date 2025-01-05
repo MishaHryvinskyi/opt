@@ -27,18 +27,19 @@ body {
   background-color: rgb(211, 206, 206);
 }
 
-.radio-wrapper {
-  margin: 40px 0;
-  width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .job {
   cursor: pointer;
-  margin-right: 20px;
+  margin: 0;
+}
+
+.radio-wrapper {
+  width: 600px;
+  padding: 20px;
+  margin: 40px 0;
+}
+
+.radio-wrapper .job-wrap:not(:last-child) {
+  margin-right: 8px;
 }
 
 .job-wrap {
@@ -221,4 +222,8 @@ table td {
   margin-left: 20px;
   width: 20px;
   height: 20px;
+}
+
+.urgency {
+  color: rgb(194, 97, 80);
 }

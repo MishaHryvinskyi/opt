@@ -49,10 +49,26 @@
             <input pattern="\d{10}" required class="user-number input" id="number" name="number" type="tel" placeholder="Телефон">
           </label>
 
-          <label for="rim">
+          <!-- <label for="rim">
             Оправа
-            <input class="input user-rim-price" id="rim" name="rim" type="number" placeholder="Ціна оправи">
-          </label>
+            <input class="input user-rim-price" id="rim" name="rim" type="number" min="400" max="3000" placeholder="Ціна оправи">
+          </label> -->
+          <fieldset>
+            <legend>Оправи</legend>
+            <label for="rim"></label>
+            <select class="input user-rim-price" name="" id="rim">
+              <option value="645">AMSHAR 645</option>
+              <option value="1445">AMSHAR lux 1445</option>
+              <option value="525">AVL 525</option>
+              <option value="295">CHARM 295</option>
+              <option value="2600">Calvin Klein 2600</option>
+              <option value="400">Dacchi 400</option>
+              <option value="645">Eclipse 645</option>
+              <option value="1100">Eclipse lux 1100</option>
+              <option value="1450">Evision 1450</option>
+              <option value="465">ENNI MARCO 465</option>
+            </select>
+          </fieldset>
 
           <label for="lenses">
             Лінзи
@@ -66,25 +82,31 @@
             <span>OS<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-price-tag"></use></svg></span>
             <input id="os" class="input user-lenses-os" type="number" placeholder="ціна-OS">
           </label>
-
-          <div class="radio-wrapper">
-            <label class="job-wrap" for="job1">
-              <input class="job" id="job1" name="job" type="radio" value="200">Робота техніка
-            </label>
-            <label class="job-wrap" for="job2">
-              <input class="job" id="job2" name="job" type="radio" value="300">Власна оправа
-            </label>
-            <label class="job-wrap" for="job3"> 
-              <input class="job" id="job3" name="job" type="radio" value="250"> Лєска
-            </label>
-            <label class="job-wrap" for="job4">
-              <input class="job" id="job4" name="job" type="radio" value="300"> Біфокали
-            </label>
-          </div>
           
-          <label class="job-wrap" for="ton">
-            <input class="ton" type="checkbox" name="ton" id="ton" value="250"> Тонування
-          </label>
+          
+            <fieldset class="radio-wrapper">
+              <label class="job-wrap" for="job1">
+                <input class="job" id="job1" name="job" type="radio" value="200">Робота техніка
+              </label>
+              <label class="job-wrap" for="job2">
+                <input class="job" id="job2" name="job" type="radio" value="300">Власна оправа
+              </label>
+              <label class="job-wrap" for="job3"> 
+                <input class="job" id="job3" name="job" type="radio" value="250"> Лєска
+              </label>
+              <label class="job-wrap" for="job4">
+                <input class="job" id="job4" name="job" type="radio" value="300"> Біфокали
+              </label>
+            </fieldset>
+          
+            <fieldset class="radio-wrapper">
+              <label class="job-wrap" for="ton">
+                <input class="ton" type="checkbox" name="ton" id="ton" value="250"> Тонування
+              </label>
+              <label class="job-wrap" for="urgency">
+                <input class="urgency" type="checkbox" name="urgency" id="urgency" value="orange"> Терміновість
+              </label>
+            </fieldset>
           <label for="comment">
             Коментар
             <textarea class="comment" placeholder="коментар" id="comment"></textarea>
