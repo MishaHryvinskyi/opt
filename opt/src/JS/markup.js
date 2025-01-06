@@ -47,10 +47,32 @@ const markupRadioBtn = (radio) => {
             <input class="job" id="${id}" name="job" type="radio" value="${price}">${text}
         </label>
     `).join('')
+};
+
+const markupKlient = (arr) => {
+    const { userName, number, rimPrice, lenses, lensesOD, lensesOS, job, ton } = arr;
+    const separite = rimPrice.split(' ');
+   const totalPrice = myltiply(lensesOD, lensesOS, separite[1], job, ton);
+   
+   console.log(totalPrice)
+    return `
+        <div>
+        <h2>Заиовник ${userName}</h2>
+        <h2>Номер телефону ${number}</h2>
+        <h3>Оправа ${rimPrice} грн</h3>
+        <h3>Лінзи ${lenses} грн</h3>
+        <h3>OD ${lensesOD} грн</h3>
+        <h3>OS ${lensesOS} грн</h3>
+        <h3>Робота ${job} грн</h3>
+        <h3>Тонування ${ton} грн</h3>
+        <h3>Загальна вартість ${totalPrice} грн</h3>
+      </div>
+    `
 }
 
 export {
     createMarkup,
     markupOption,
-    markupRadioBtn
+    markupRadioBtn,
+    markupKlient
 };

@@ -1,9 +1,10 @@
 import { arrRim, arrJob } from "./JS/data";
 import { createUsers } from "./API/api";
-import { markupOption, markupRadioBtn } from './JS/markup';
+import { markupOption, markupRadioBtn, markupKlient } from './JS/markup';
 import { getSelectedRadioValue } from "./JS/func";
 import Notiflix from 'notiflix';
 
+const userOrder = document.querySelector('.user-order');
 const form = document.querySelector('.js-form');
 const userName = document.querySelector('.user-name');
 const userNumber = document.querySelector('.user-number');
@@ -46,4 +47,6 @@ function onSubmit(e) {
         Notiflix.Notify.success('ЗАМОВЛЕННЯ СТВОРЕНО!');
         form.reset(); 
     });
+
+    userOrder.innerHTML =  markupKlient(formData);
 }

@@ -1,5 +1,5 @@
 export const arrRim = [
-    'Власна оправа 0', 
+    'Власна-оправа 0', 
     // A
     'Alanie 595', 'AMSHAR 645', 'AMSHAR-lux  1445', 'AVL 525', 'Avtoman  250', 'Avtoman 295',
     // C

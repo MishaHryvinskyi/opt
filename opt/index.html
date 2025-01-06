@@ -39,56 +39,59 @@
         </ul>
       </nav>
     </header>
-    <!-- FORM -->
+    <main class="main">
+      <!-- FORM -->
     <h1 class="title">Створити замовлення</h1>
     <form class="js-form form">
-          <label for="userName">
-           <span>Замовник<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-user"></use></svg></span> 
-            <input required class="user-name input" id="userName" name="userName" type="text" placeholder="Прізвище та ім'я">
-          </label>
-          <label for="number">
-            <span>Номер телефону<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-phone"></use></svg></span>
-            <input pattern="\d{10}" required class="user-number input" id="number" name="number" type="tel" placeholder="Телефон">
-          </label>
-          <!-- RIM OPTIONS -->
-          <fieldset>
-            <legend>Оправи</legend>
-            <select class="input user-rim-price" name="" id="rim"></select>
-          </fieldset>
+      <label for="userName">
+      <span>Замовник<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-user"></use></svg></span> 
+        <input required class="user-name input" id="userName" name="userName" type="text" placeholder="Прізвище та ім'я">
+      </label>
+      <label for="number">
+        <span>Номер телефону<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-phone"></use></svg></span>
+        <input pattern="\d{10}" required class="user-number input" id="number" name="number" type="tel" placeholder="Телефон">
+      </label>
+      <!-- RIM OPTIONS -->
+      <fieldset>
+        <legend>Оправи</legend>
+        <select class="input user-rim-price" name="" id="rim"></select>
+      </fieldset>
 
-          <label for="lenses">
-            Лінзи
-            <input class="input user-lenses" id="lenses" name="lenses" type="text" placeholder="Виробник і специфікація">
-          </label>
-          <label for="od">
-            <span>OD<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-price-tag"></use></svg></span>
-            <input id="od" class="input user-lenses-od" type="number" placeholder="ціна-OD">
-          </label>
-          <label for="os">
-            <span>OS<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-price-tag"></use></svg></span>
-            <input id="os" class="input user-lenses-os" type="number" placeholder="ціна-OS">
-          </label>
-          
-          <fieldset class="radio-js radio-wrapper"></fieldset>
-          
-            <fieldset class="radio-wrapper">
-              <label class="job-wrap" for="ton">
-                <input class="ton" type="checkbox" name="ton" id="ton" value="250"> Тонування
-              </label>
-              <label class="job-wrap" for="urgency">
-                <input class="urgency" type="checkbox" name="urgency" id="urgency" value="orange"> Терміновість
-              </label>
-            </fieldset>
+      <label for="lenses">
+        Лінзи
+        <input class="input user-lenses" id="lenses" name="lenses" type="text" placeholder="Виробник і специфікація">
+      </label>
+      <label for="od">
+        <span>OD<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-price-tag"></use></svg></span>
+        <input id="od" class="input user-lenses-od" type="number" placeholder="ціна-OD">
+      </label>
+      <label for="os">
+        <span>OS<svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-price-tag"></use></svg></span>
+        <input id="os" class="input user-lenses-os" type="number" placeholder="ціна-OS">
+      </label>
+      
+      <fieldset class="radio-js radio-wrapper"></fieldset>
+       
+      <fieldset class="radio-wrapper">
+        <label class="job-wrap" for="ton">
+          <input class="ton" type="checkbox" name="ton" id="ton" value="250"> Тонування
+        </label>
+        <label class="job-wrap" for="urgency">
+          <input class="urgency" type="checkbox" name="urgency" id="urgency" value="orange"> Терміновість
+        </label>
+      </fieldset>
 
-          <label for="comment">
-            Коментар
-            <textarea class="comment" placeholder="коментар" id="comment"></textarea>
-          </label>
+      <label for="comment">
+        Коментар
+        <textarea class="comment" placeholder="коментар" id="comment"></textarea>
+      </label>
 
       <button class="btn" type="submit">
         Створити <svg class="header__icon" width="20" height="20"><use href="./src/images/symbol-defs.svg#icon-pencil"></use>
       </button>
     </form>
+    <div class="user-order"></div>
+    </main>
 
     <script type="module" src="/src/index.js"></script>
   </body>
