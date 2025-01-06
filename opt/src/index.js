@@ -1,4 +1,6 @@
+import { arrRim, arrJob } from "./JS/data";
 import { createUsers } from "./API/api";
+import { markupOption, markupRadioBtn } from './JS/markup';
 import { getSelectedRadioValue } from "./JS/func";
 import Notiflix from 'notiflix';
 
@@ -12,6 +14,10 @@ const lensesOD = document.querySelector('.user-lenses-od');
 const lensesOS = document.querySelector('.user-lenses-os');
 const ton = document.querySelector('.ton');
 const urgency = document.querySelector('.urgency');
+const radioEl = document.querySelector('.radio-js');
+
+rimPrice.insertAdjacentHTML('beforeend', markupOption(arrRim))
+radioEl.insertAdjacentHTML('beforeend', markupRadioBtn(arrJob))
 
 form.addEventListener('submit', onSubmit);
 
@@ -22,7 +28,7 @@ function onSubmit(e) {
         userName: userName.value.trim(),
         number: userNumber.value.trim(),
         comment: comment.value.trim(),
-        rimPrice: rimPrice.value.trim(),
+        rimPrice: rimPrice.value,
         lenses: lenses.value.trim(),
         lensesOD: lensesOD.value.trim(),
         lensesOS: lensesOS.value.trim(),
