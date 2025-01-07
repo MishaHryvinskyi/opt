@@ -19,7 +19,7 @@ function createMarkup({
    const totalPrice = myltiply(lensesOD, lensesOS, separite[1], job, ton);
    const urgencyClass = urgency ? 'urgency' : '';
     return `
-    <tr class="user-list ${urgencyClass}">
+    <tr id="${id}" class="user-list ${urgencyClass}">
         <td class="number-colum">${id}</td>
         <td class="customer">${userName}</td>
         <td class="number">${number}</td>
