@@ -100,14 +100,6 @@ textarea {
   margin-bottom: 40px;
 }
 
-.order-tab {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
 .user-list:nth-of-type(even) {
   background-color: lightgray;
 }
@@ -123,6 +115,9 @@ th, td {
 }
 
 table {
+  margin: 0 auto;
+  align-items: center;
+  width: 1800px;
   border-collapse: collapse;
 }
 
