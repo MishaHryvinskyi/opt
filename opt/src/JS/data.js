@@ -1,7 +1,7 @@
 export const arrRim = [
     'Власна-оправа 0', 
     // A
-    'Alanie 595', 'AMSHAR 645', 'AMSHAR-lux  1445', 'AVL 525', 'Avtoman  250', 'Avtoman 295',
+    'Alanie 595', 'AMSHAR 645', 'AMSHAR-lux 1445', 'AVL 525', 'Avtoman 250', 'Avtoman 295',
     // C
     'Caizi 195', 'CHARM 295', 'Choice 350', 'Calvin-Klein 2600',
     // D
@@ -19,7 +19,7 @@ export const arrRim = [
     // N
     'Nikitana 635', 'Nikitana 645', 'Nikitana 1645',
     // O
-    'OPTIMIX  465', 'OPTIMIX 695', 'OPTIMIX-lux  1300', 'Ovvio 925', 'Ovvio 795',
+    'OPTIMIX 465', 'OPTIMIX 695', 'OPTIMIX-lux 1300', 'Ovvio 925', 'Ovvio 795',
     // P
     'Panorama-Kids 445', 'Paolo-Rossi 380', 'Paolo-Rossi 520', 'Paolo-Rossi 950', 'Polaroid 465', 'Polaroid 950','PRADA 3500', 'Proud 900', 'RROVIZION 535', 'PROVIZION-(накладки) 2000', 'Pinguin-Baby 400', 'Pinguin-Baby 595', 'Pinguin-Baby 725',
     // R
