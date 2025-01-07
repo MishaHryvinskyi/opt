@@ -1,13 +1,12 @@
-const modalBackdrop = document.querySelector('.backdrop');
-const userOrder = document.querySelector('.user-order');
+import { refs } from "./refs";
 
 function openModal(content) {
-    userOrder.innerHTML = content;
-    modalBackdrop.classList.remove('is-hidden');
+    refs.userOrder.innerHTML = content;
+    refs.modalBackdrop.classList.remove('is-hidden');
 }
   
 function closeModal() {
-    modalBackdrop.classList.add('is-hidden');
+    refs.modalBackdrop.classList.add('is-hidden');
 }
 
 export {

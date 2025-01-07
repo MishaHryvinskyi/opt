@@ -11,7 +11,8 @@ function createMarkup({
     lensesOS,
     comment,
     ton,
-    urgency
+    urgency,
+    date
  }) {
 
    const separite = rimPrice.split(' ');
@@ -31,6 +32,7 @@ function createMarkup({
         <td class="price">${ton} грн</td>
         <td class="comment">${comment || " "}</td>
         <td class="price">${totalPrice} грн</td>
+        <td class="price">${date}</td>
     </tr>`
 };
 
@@ -39,7 +41,6 @@ const markupOption = (rim) => {
         <option value="${item}">${item} грн</option>
     `).join('')
 };
-
 
 const markupRadioBtn = (radio) => {
     return radio.map(({ id, price, text }) => `
@@ -52,7 +53,7 @@ const markupRadioBtn = (radio) => {
 const markupKlient = (arr) => {
     const { userName, number, rimPrice, lenses, lensesOD, lensesOS, job, ton } = arr;
     const separite = rimPrice.split(' ');
-   const totalPrice = myltiply(lensesOD, lensesOS, separite[1], job, ton);
+    const totalPrice = myltiply(lensesOD, lensesOS, separite[1], job, ton);
    
     return `
         <div class="order-wrapper">

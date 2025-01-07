@@ -1,45 +1,32 @@
-import { arrRim, arrJob } from "./JS/data";
-import { createUsers } from "./API/api";
-import { closeModal, openModal } from "./JS/modal";
-import { markupOption, markupRadioBtn, markupKlient } from './JS/markup';
-import { getSelectedRadioValue } from "./JS/func";
 import Notiflix from 'notiflix';
+import { refs } from "./JS/refs";
+import { createUsers } from "./API/api";
+import { arrRim, arrJob } from "./JS/data";
+import { closeModal, openModal } from "./JS/modal";
+import { getSelectedRadioValue, currentDate } from "./JS/func";
+import { markupOption, markupRadioBtn, markupKlient } from './JS/markup';
 
-const form = document.querySelector('.js-form');
-const userName = document.querySelector('.user-name');
-const userNumber = document.querySelector('.user-number');
-const comment = document.querySelector('.comment');
-const rimPrice = document.querySelector('.user-rim-price');
-const lenses = document.querySelector('.user-lenses');
-const lensesOD = document.querySelector('.user-lenses-od');
-const lensesOS = document.querySelector('.user-lenses-os');
-const ton = document.querySelector('.ton');
-const urgency = document.querySelector('.urgency');
-const radioEl = document.querySelector('.radio-js');
+refs.rimPrice.insertAdjacentHTML('beforeend', markupOption(arrRim))
+refs.radioEl.insertAdjacentHTML('beforeend', markupRadioBtn(arrJob))
 
-rimPrice.insertAdjacentHTML('beforeend', markupOption(arrRim))
-radioEl.insertAdjacentHTML('beforeend', markupRadioBtn(arrJob))
-
-const closeModalBtn = document.querySelector('.close-btn'); // Додамо кнопку закриття
-
-form.addEventListener('submit', onSubmit);
-
-closeModalBtn.addEventListener('click', closeModal);
+refs.form.addEventListener('submit', onSubmit);
+refs.closeModalBtn.addEventListener('click', closeModal);
 
 function onSubmit(e) {
   e.preventDefault();
 
   const formData = {
-    userName: userName.value.trim(),
-    number: userNumber.value.trim(),
-    comment: comment.value.trim(),
-    rimPrice: rimPrice.value,
-    lenses: lenses.value.trim(),
-    lensesOD: lensesOD.value.trim(),
-    lensesOS: lensesOS.value.trim(),
-    ton: ton.checked ? ton.value : 0,
+    userName: refs.userName.value.trim(),
+    number: refs.userNumber.value.trim(),
+    comment: refs.comment.value.trim(),
+    rimPrice: refs.rimPrice.value,
+    lenses: refs.lenses.value.trim(),
+    lensesOD: refs.lensesOD.value.trim(),
+    lensesOS: refs.lensesOS.value.trim(),
+    ton: refs.ton.checked ? refs.ton.value : 0,
     job: getSelectedRadioValue("job"),
-    urgency: urgency.checked ? true : false,
+    urgency: refs.urgency.checked ? true : false,
+    date: currentDate(),
   };
 
   if (!formData.job) {
@@ -49,7 +36,7 @@ function onSubmit(e) {
 
   createUsers(formData).then(() => {
     Notiflix.Notify.success('ЗАМОВЛЕННЯ СТВОРЕНО!');
-    form.reset(); 
+    refs.form.reset(); 
   });
 
   const modalContent = markupKlient(formData);
