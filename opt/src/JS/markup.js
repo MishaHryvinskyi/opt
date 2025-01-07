@@ -54,19 +54,22 @@ const markupKlient = (arr) => {
     const separite = rimPrice.split(' ');
    const totalPrice = myltiply(lensesOD, lensesOS, separite[1], job, ton);
    
-   console.log(totalPrice)
     return `
-        <div>
-        <h2>Заиовник ${userName}</h2>
-        <h2>Номер телефону ${number}</h2>
-        <h3>Оправа ${rimPrice} грн</h3>
-        <h3>Лінзи ${lenses} грн</h3>
-        <h3>OD ${lensesOD} грн</h3>
-        <h3>OS ${lensesOS} грн</h3>
-        <h3>Робота ${job} грн</h3>
-        <h3>Тонування ${ton} грн</h3>
-        <h3>Загальна вартість ${totalPrice} грн</h3>
-      </div>
+        <div class="order-wrapper">
+            <h2 class="order__color title">Замовник: <span class="accent">${userName}</span></h2>
+            <h2 class="order__color title">Номер телефону: <span class="accent">${number}</span></h2>
+            <div class="order__lenses-wrap">
+                <h3 class="order__title">Оправа: <span class="accent">${rimPrice} грн</span></h3>
+                <h3 class="order__title">Лінзи: <span class="accent">${lenses}</span></h3>
+                <h3 class="order__title">OD: <span class="accent">${lensesOD} грн</span></h3>
+                <h3 class="order__title">OS: <span class="accent">${lensesOS} грн</span></h3>
+            </div>
+            <div class="order__lenses-wrap">
+                <h3 class="order__title">Робота: <span class="accent">${job} грн</span></h3>
+                <h3 class="order__title">Тонування: <span class="accent">${ton} грн</span></h3>
+            </div>
+            <h3 class="title">Загальна вартість: <span class="accent">${totalPrice} грн</span></h3>
+       </div>
     `
 }
 

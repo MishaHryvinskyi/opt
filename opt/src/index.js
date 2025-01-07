@@ -1,10 +1,10 @@
 import { arrRim, arrJob } from "./JS/data";
 import { createUsers } from "./API/api";
+import { closeModal, openModal } from "./JS/modal";
 import { markupOption, markupRadioBtn, markupKlient } from './JS/markup';
 import { getSelectedRadioValue } from "./JS/func";
 import Notiflix from 'notiflix';
 
-const userOrder = document.querySelector('.user-order');
 const form = document.querySelector('.js-form');
 const userName = document.querySelector('.user-name');
 const userNumber = document.querySelector('.user-number');
@@ -20,33 +20,39 @@ const radioEl = document.querySelector('.radio-js');
 rimPrice.insertAdjacentHTML('beforeend', markupOption(arrRim))
 radioEl.insertAdjacentHTML('beforeend', markupRadioBtn(arrJob))
 
+const closeModalBtn = document.querySelector('.close-btn'); // Додамо кнопку закриття
+
 form.addEventListener('submit', onSubmit);
 
+closeModalBtn.addEventListener('click', closeModal);
+
 function onSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const formData = {
-        userName: userName.value.trim(),
-        number: userNumber.value.trim(),
-        comment: comment.value.trim(),
-        rimPrice: rimPrice.value,
-        lenses: lenses.value.trim(),
-        lensesOD: lensesOD.value.trim(),
-        lensesOS: lensesOS.value.trim(),
-        ton: ton.checked ? ton.value : 0,
-        job: getSelectedRadioValue("job"),
-        urgency: urgency.checked ? true : false,
-    };
+  const formData = {
+    userName: userName.value.trim(),
+    number: userNumber.value.trim(),
+    comment: comment.value.trim(),
+    rimPrice: rimPrice.value,
+    lenses: lenses.value.trim(),
+    lensesOD: lensesOD.value.trim(),
+    lensesOS: lensesOS.value.trim(),
+    ton: ton.checked ? ton.value : 0,
+    job: getSelectedRadioValue("job"),
+    urgency: urgency.checked ? true : false,
+  };
 
-    if (!formData.job) {
-        Notiflix.Notify.failure('Будь ласка, оберіть опцію в полі "Робота".');
-        return;
-    }
+  if (!formData.job) {
+    Notiflix.Notify.failure('Будь ласка, оберіть опцію в полі "Робота".');
+    return;
+  }
 
-    createUsers(formData).then(() => {
-        Notiflix.Notify.success('ЗАМОВЛЕННЯ СТВОРЕНО!');
-        form.reset(); 
-    });
+  createUsers(formData).then(() => {
+    Notiflix.Notify.success('ЗАМОВЛЕННЯ СТВОРЕНО!');
+    form.reset(); 
+  });
 
-    userOrder.innerHTML =  markupKlient(formData);
+  const modalContent = markupKlient(formData);
+
+  openModal(modalContent);
 }
