@@ -33,6 +33,11 @@ function createMarkup({
         <td class="comment">${comment || " "}</td>
         <td class="price">${totalPrice} грн</td>
         <td class="price">${date}</td>
+        <td class="price">
+            <button type="button" class="remove-btn">
+                <svg class="bin-svg"><use href="./src/images/symbol-defs.svg#icon-bin"></use></svg>
+            </button>
+        </td>
     </tr>`
 };
 
