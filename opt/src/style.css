@@ -119,6 +119,7 @@ table {
   align-items: center;
   width: 1800px;
   border-collapse: collapse;
+  margin-bottom: 80px;
 }
 
 thead, tbody {
@@ -309,4 +310,24 @@ table td {
   background-color: #ececec;
   color: #385170;
   border: 2px solid #385170;
+}
+
+.remove-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(139, 121, 121);;
+  width: 40px;
+  height: 40px;
+}
+
+.remove-btn:hover {
+  border-radius: 50%;
+  background-color: rgb(225, 60, 60);
+}
+
+.bin-svg {
+  fill: wheat;
+  width: 20px;
+  height: 20px;
 }
