@@ -16,7 +16,16 @@ const createUsers = (value) => {
     return fetch(API, options).then(res => res.json())
 }
 
+const removeUser = (id) => {
+    const options = {
+        method: "DELETE",
+    }
+
+    return fetch(`${API}/${id}`, options).then(res => res.json())
+}
+
 export {
     getUsers, 
-    createUsers
+    createUsers,
+    removeUser
 }
